@@ -6,6 +6,7 @@ const VITE_APP_TITLE = import.meta.env.VITE_APP_TITLE
 
 <template>
   <div>======== {{ VITE_APP_TITLE }} ========</div>
+  <div>変更メッセージ</div>
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
