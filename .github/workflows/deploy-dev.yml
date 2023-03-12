@@ -33,8 +33,9 @@ jobs:
         with:
           publish-dir: './dist'
           production-branch: dev
+          github-deployment-environment: Netlify dev
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: ${{ github.event.head_commit.message }}
+          deploy-message: ${{ github.event.head_commit.message || github.event.pull_request.title }}
           alias: deploy-preview-${{ github.event.number }}
           fails-without-credentials: true
         env:
